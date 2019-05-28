@@ -1,0 +1,4 @@
+name = "SpatialCoherence"
+uuid = "0704268a-808d-11e9-3114-7fbda6806d61"
+authors = ["ben <b.pegar@gmail.com>"]
+version = "0.1.0"
