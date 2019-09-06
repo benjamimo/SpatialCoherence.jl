@@ -139,12 +139,14 @@ yv = Integer.(div.(r.*sin.(theta),XYsize))
 for member=1:N
     # Right component
     UauxR = exp(im * phi[member]) .* MatrixTranslate(UseedR, xv[member], yv[member])
-    UauxR = UauxR./maximum(abs.(UauxR))
+    # UauxR = UauxR./maximum(abs.(UauxR))
+    UauxR = UauxR./N
     UR = UauxR + UR
 
     # Left component
     UauxL = exp(im * phi[member]) .* MatrixTranslate(UseedL, xv[member], yv[member])
-    UauxL = UauxL./maximum(abs.(UauxL))
+    # UauxL = UauxL./maximum(abs.(UauxL))
+    UauxL = UauxL./N
     UL = UauxL + UL
 end
 
